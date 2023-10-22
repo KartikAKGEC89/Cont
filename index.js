@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 const messageroute = require('./Routes/message')
+const cors = require('cors')
+
+
+app.use(cors())
 
 mongoose.connect("mongodb+srv://Registration:2111087@cluster0.wexksa1.mongodb.net/cont?retryWrites=true&w=majority", {
 
