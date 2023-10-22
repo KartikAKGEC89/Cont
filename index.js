@@ -5,7 +5,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 const messageroute = require('./Routes/message')
 
-mongoose.connect(process.env.DB)
+mongoose.connect(process.env.DB, {
+
+  useNewUrlParser: "true",
+  useUnifiedTopology: "true"
+
+})
     .then(() => console.log('connected....'))
     .catch((err) => console.log(err));
 
